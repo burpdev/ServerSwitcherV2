@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="200" CanResize="False" Width="200" Height="200"  Background="Black"
+        x:Class="ServerSwitcherV2.MainWindow"
+        Title="">
+  <StackPanel>
+    <StackPanel x:Name="MainPanel" IsVisible="true">
+      <Button Click="CoopDX" x:Name="DXButton" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="42" Width="115">SM64CoopDX</Button>
+      <Button Click="EXCoop" x:Name="EXButton" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="42 10" Width="115">SM64EXCoop</Button>
+    </StackPanel>
+    
+    <WrapPanel x:Name="ConnectPanel" HorizontalAlignment="Center"  IsVisible="False">
+      <Label x:Name="ConnectLabel" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="15 40" Width="200">Default</Label>
+      <ComboBox SelectedItem="ConnectSelect" x:Name="DropDown" SelectedIndex="0" MaxDropDownHeight="100" HorizontalAlignment="Center" Margin="10,20" IsVisible="True">
+        <ComboBoxItem>CoopNet</ComboBoxItem>
+        <ComboBoxItem>BurritoNet</ComboBoxItem>
+      </ComboBox>
+      
+      <Button Click="ConnectHandle" x:Name="ConnectButton" Background="Gray" HorizontalAlignment="Center" Margin="-10, 20" Width="76" IsVisible="True">Connect</Button>
+    </WrapPanel>
+  </StackPanel>
+</Window>
