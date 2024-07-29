@@ -2,9 +2,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="200" CanResize="False" Width="200" Height="200"  Background="Black"
+        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="200" CanResize="False" Width="200" Height="200"
         x:Class="ServerSwitcherV2.MainWindow"
         Title="">
+  
   <StackPanel>
     <StackPanel x:Name="MainPanel" IsVisible="true">
       <Button Click="CoopDX" x:Name="DXButton" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="42" Width="115">SM64CoopDX</Button>

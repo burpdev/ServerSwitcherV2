@@ -28,14 +28,16 @@ namespace ServerSwitcherV2
             switch (Environment.OSVersion.Platform.ToString())
             {
                 case "Win32NT":
+                case "Win32Windows":
+                case "Win32S":
                     SelectedFile = Environment.ExpandEnvironmentVariables(@"%APPDATA%\");
                     break;
                 case "Unix":
-                    SelectedFile = "~/.local/share/";
+                    SelectedFile = Environment.ExpandEnvironmentVariables(@"%HOME%/.local/share/");
                     break;
                 case "MacOSX":
-                    SelectedFile = "~/Library/Application Support/";
-                    break;
+                    SelectedFile = Environment.ExpandEnvironmentVariables(@"%HOME%/Library/Application Support/");
+                    break; 
             }
         }
 
